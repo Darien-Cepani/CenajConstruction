@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cenaj Construction</title>
+    <link rel="icon" href="assets/img/logo.svg">
+    <meta name="author" content="pike.al">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fc50f67b1.js" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+        <div class="desktopNav">
+            <nav class="navBar">
+                <img src="assets/img/logo-blackText.svg" alt="" class="logo">
+                <ul class="navLinks">
+                    <li><a href="#work" >Work</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#contact" >Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mobileNav">
+            <div class="header">
+                <img src="assets/img/logo-blackText.svg" alt="" class="logo">
+                <div class="burger-container">
+                  <div id="burger">
+                    <div class="bar topBar"></div>
+                    <div class="bar btmBar"></div>
+                  </div>
+                </div>
+                <div class="icon icon-apple"></div>
+                <ul class="menu">
+                  <li class="menu-item"><a href="#work">Work</a></li>
+                  <li class="menu-item"><a href="#about">About</a></li>
+                  <li class="menu-item"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="shop icon icon-bag"></div>
+              </div>
+        </div>
+
+        <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+        
+        <section class="one">
+            <div class="greeting-div">
+                <h1 class="greeting">Renovate your 
+                    <div class="typewrite" data-period="2000" data-type='[ "future", "home" ]'>
+                      <span class="wrap"></span>
+                    </div>
+                </h1>
+                <p class="motto">Complete Home Repair Services in <a href="https://goo.gl/maps/kBh9xF8ZdUpqXyMn6" class="location">Boston, MA.</a></p>
+            </div>
+            <div class="more">
+                <a href="#work" class="scroll" onmouseover="lower()" onmouseout="reset()">Find out more</a>
+                <i class="fas fa-chevron-down" id="down"></i>
+            </div>
+            <!-- <img src="assets/img/background3.png" alt="" class="backgroundImg inverted" data-aos="fade-down"> -->
+            <div class="video-container">
+                <video autoplay loop muted id="myVideo">
+                    <source src="assets/video/background-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="two" id="work">
+            <h1>What we offer:</h1>
+            <p>(Tap to inquire)</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Appliance%20Installation%20*from%20your%20Website*">
+                            <div class="icon">
+                                <img class="cardIcon" src="assets/img/tools.png"/>
+                            </div>
+                            <h1 class="cardTitle">Appliance Installation</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Bathroom%20Remodeling%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/remodel.png"/></div>
+                            <h1 class="cardTitle">Bathroom Remodeling</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Complete%20Interior%20Painting%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/paint.png"/></div>
+                            <h1 class="cardTitle">Complete Interior Painting</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Deck%20Repair%20and%20Restoration%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/deck.png"/></div>
+                            <h1 class="cardTitle">Deck Repair and Restoration</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Door%20Installation%20and%20Repair%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/door.png"/></div>
+                            <h1 class="cardTitle">Door Installation and Repair</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Electrical%20Fixture%20Repair%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/outlet.png"/></div>
+                            <h1 class="cardTitle">Electrical Fixture Repair</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Hardwood%20Flooring%20Installation%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/parquet.png"/></div>
+                            <h1 class="cardTitle">Hardwood Flooring Installation</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Handyman%20Services%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/handyman.png"/></div>
+                            <h1 class="cardTitle">Handyman Services</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Tile%20Flooring%20Installation%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/tiles.png"/></div>
+                            <h1 class="cardTitle">Tile Flooring Installation</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Kitchen%20Cabinet%20Remodeling%20&%20Installation%20*from%20your%20Website*">
+                            <div class="icon"><img class="cardIcon" src="assets/img/kitchen.png"/></div>
+                            <h1 class="cardTitle">Kitchen Cabinet Remodeling And Installation</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="three" id="about">
+            <div class="wrap">
+                <h1>About Us:</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
+                    pariatur adipisci minus illum atque mollitia vitae minima 
+                    perferendis expedita repellendus earum ipsum non.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
+                    pariatur adipisci minus illum atque mollitia vitae minima 
+                    perferendis expedita repellendus earum ipsum non.</p>
+                    <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
+                    pariatur adipisci minus illum atque mollitia vitae minima 
+                    perferendis expedita repellendus earum ipsum non.</p>
+                    <br>
+                <p><b>Qualityis what we areproud of.</b></p>
+            </div>
+        </section>
+
+        <section class="four">
+            <div id="contact">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d94373.6999350821!2d-71.0940313!3d42.3387256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a0de7e77a4b%3A0x2f033fd6c495d564!2sMuseum%20of%20Fine%20Arts%2C%20Boston!5e0!3m2!1sen!2s!4v1627412578787!5m2!1sen!2s"
+                allowfullscreen="1" 
+                loading="lazy"
+                class="map">
+            </iframe>
+            <div class="custom">
+                <h1>Need custom work done?</h1>
+                <a href="https://wa.me/18573124573/?text=Hello!%20*I%20am%20coming%20from%20the%20website*%20and%20I%20have%20a%20special%20request" class="button inverted">Contact Us!</a>
+            </div>
+        </div>
+        </section>
+
+        <section  class="footer">
+            <div class="left-footer">
+                <p><b style="color: red; font-weight: bold;">Phone:</b> 857-312-4573  <span style="color: red; font-weight: bold">|</span>  857-237-5932</p>
+            </div>
+            <div class="center-footer">
+                <img class="footer-logo" src="assets/img/logo-blackText.svg"/>
+            </div>
+            <div class="right-footer" style="display: flex; vertical-align: baseline;">
+                <p><b style="color: red; font-weight: bold;">Email:</b> albansmaka@outlook.com</p>
+                <!-- <p>Powered by</p>
+                <a href="https://pike.al"><img class="logo-pikeal grow" src="assets/img/logo.png"></a> -->
+            </div>
+        </section>
+
+    <script src="index.js"></script>
+    <script>
+        toTop = document.getElementById("toTop");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTop.style.opacity = "1.0";
+            } else {
+                toTop.style.opacity = "0.0";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+</body>
+</html>

@@ -55,11 +55,14 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
-AOS.init({
-    offset: 400, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 700 // values from 0 to 3000, with step 50ms
-});
+(function () {
+    var burger = document.querySelector(".burger-container"),
+        header = document.querySelector(".header");
+
+    burger.onclick = function () {
+        header.classList.toggle("menu-opened");
+    };
+})();
 
 function lower() {
     document.getElementById("down").style.marginTop = "1em";

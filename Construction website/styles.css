@@ -10,21 +10,31 @@
 .grow:hover{
     transform: scale(1.2);
 }
-.whitebg{
-    background: black;
-}
+
 body{
     background-color: black;
     font-family: "MomcakeBold";
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    transition: all 200ms ease-in-out;
     text-decoration: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(0.7) sepia(30%) blur(5px);
+  }
 
 section{
     height: 100vh;
@@ -32,10 +42,21 @@ section{
     display: flex;
     flex-direction: column;
     color: white;
+    scroll-margin-top: 2em;
 }
 
-header{
+.mobileNav{
+    display: none;
+}
+
+.desktopNav{
+    display: relative;
     position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav{
     z-index: 10;
     top: 0;
     height: fit-content;
@@ -47,13 +68,37 @@ header{
     background-color: rgba(255,255,255,1);
 }
 
+#toTop {
+    display: block; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 25px; /* Place the button at the bottom of the page */
+    right: 25px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: white; /* Text color */
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: 250ms all ease-in-out;
+    backdrop-filter: blur(20px);
+  }
+  
+  #toTop:hover {
+      color: white;
+    background-color: red; /* Set a background color */
+    border-radius: 0;
+  }
+
 .logo{
     width: 150px;
 }
 
 .navLinks li {
     display: inline-block;
-    padding: 0px 1em;
+    padding: 0px 0.5em;
     list-style: none;
 }
 
@@ -103,16 +148,9 @@ header{
     z-index: -100;
 }
 
-video{
-    position: fixed;
-    width: 100vw;
-    filter: brightness(0.7) sepia(30%) blur(5px);
-}
-
 .motto{
     font-size: 1.5em;
 }
-
 
 .location{
     color: #ff0000;
@@ -153,7 +191,6 @@ video{
 }
 
 .scroll:hover{
-    font-weight: bold;
     background-color: #ff0000;
     color: white;
     text-shadow: none;
@@ -166,10 +203,7 @@ video{
     color: black;
     background-color: rgba(255,255,255,1);
     position: relative;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    backdrop-filter: blur(20px);
 }
 
 .two h1 {
@@ -182,29 +216,25 @@ video{
     margin-bottom: 2em;
 }
 
-.two ul {
+.cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
-    text-decoration: none;
+    width: 95%;
 }
 
-.two ul li {
-    display: flex;
-    flex-wrap: wrap;
+.card {
     font-size: 1em;
-    padding: 1em 2em;
-    height: 220px;
-    width: 100%;
-    list-style: none;
+    height: 200px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: black;
     border-radius: 50px;
+    transition: 250ms all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 1em 0;
 }
 
-.two ul li:hover{
+.card:hover{
     border-radius: 0px;
     transform: scale(1.05);
     color: white;
@@ -212,16 +242,29 @@ video{
     list-style: none;
     cursor: pointer;
     border: none;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)
+}
+
+.card .content{
+    width: 80%;
+}
+
+.card .cardTitle{
+    font-size: 1em;
+    color: black;
+    transition: 250ms all ease-in-out;
+}
+
+.card:hover .cardTitle{
+    color: white;
 }
 
 .cardIcon {
     width: 2.5em;
-    margin: 0.5em 30%;
-    align-self: center;
+    margin: 0.6em;
+    transition: 250ms all ease-in-out;
 }
 
-.two li:hover .cardIcon{
+.card:hover .cardIcon{
     filter: invert(95%) sepia(0%) saturate(18%) hue-rotate(312deg) brightness(104%) contrast(104%);
 }
 
@@ -260,6 +303,7 @@ video{
     background: rgba(255,255,255,0.8);
     backdrop-filter: blur(80px);
     padding: 0;
+    scroll-margin-top: 5em;
 }
 
 .button{
@@ -310,7 +354,6 @@ iframe {
     color: black;
     position: relative;
     align-items: center;
-    margin: 0em 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -350,3 +393,404 @@ iframe {
     margin: auto 0px;
     font-size: 1.5em;
 }
+
+@media only screen and (max-width: 768px) {
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+    nav{
+        z-index: 10;
+        top: 0;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 2em;
+        width: 100%;
+        background-color: rgba(255,255,255,1);
+    }
+
+    #toTop {
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 10; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        color: white; /* Text color */
+        background-color: rgba(0,0,0,0.3);
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 50px; /* Rounded corners */
+        font-size: 20px; /* Increase font size */
+        transition: 250ms all ease-in-out;
+        backdrop-filter: blur(20px);
+      }
+      
+      #toTop:hover {
+        color: white;
+        background-color: red; /* Set a background color */
+        border-radius: 0;
+      }
+
+      .navLinks li {
+        padding: 0;
+    }
+
+    .one{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .greeting-div{
+        display: flex;
+        padding-top: 5em;
+        height: fit-content;
+    }
+    
+    .greeting{
+        font-size: 3.5em;
+        margin-bottom: 0.2em;
+    }
+
+    .motto{
+        font-size: 1.5em;
+    }
+
+    .two{
+        height: fit-content;
+        font-size: 1.5em;
+        color: black;
+        backdrop-filter: blur(20px);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+        text-decoration: none;
+    }
+
+    .card{
+        margin: 0.5em 0.5em;
+        border: 1px solid rgba(0,0,0,0.1);
+        height: 220px;
+        align-items: center;
+    }
+    
+    .cardIcon {
+        width: 2em;
+        align-self: center;
+        
+    }
+
+    .three{
+        font-size: 1.7em;
+        padding: 3em 2em;
+        height: fit-content;
+    }
+
+    .four{
+        height: fit-content;
+        font-size: 1.2em;
+        color: black;
+    }
+
+    .button{
+        color: red;
+        border: 1px solid red;
+        transition: all 0.2s ease-in-out;
+        padding: 0.5em 1em;
+        margin: 0.8em 0;
+        border-radius: 50px;
+    }
+    
+    .button:hover{
+        font-weight: bold;
+        background-color: red;
+        text-shadow: none;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 0px;
+    }
+
+    .footer{
+        height: fit-content;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        font-size: 0.8em;
+        padding: 2em 0;
+    }
+
+    .left-footer{
+        order: 2;
+        width: fit-content;
+        margin: 0.3em 0;
+        font-size: 1.8em;
+    }
+    
+    .center-footer{
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em auto;
+    }
+    
+    .footer-logo{
+        width: 12em;
+    }
+    
+    .right-footer{
+        order: 3;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        margin: 0.3em 0;
+        font-size: 1.8em;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .desktopNav{
+        display: none;
+    }
+
+    .one{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .greeting-div{
+        display: flex;
+        padding-top: 10em;
+        height: fit-content;
+    }
+    
+    .greeting{
+        width: 80%;
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 0.5em;
+    }
+
+    .motto{
+        width: 60%;
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        top: 0;
+        left: 0;
+        height: 5em;
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        transition: all 250ms ease-in-out;
+        transition-delay: 250ms;
+        z-index: 100;
+      }
+
+      .header .logo{
+        position: absolute;
+        margin: 1.5em;
+      }
+
+      .header .burger-container {
+        position: absolute;
+        display: inline-block;
+        height: 5em;
+        width: 5em;
+        right: 1em;
+        cursor: pointer;
+        transform: rotate(0deg);
+        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .header .burger-container #burger {
+        width: 2em;
+        height: 100%;
+        position: relative;
+        display: block;
+        margin: -4px auto;
+        top: 50%;
+      }
+      .header .burger-container #burger .bar {
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: relative;
+        background: red;
+        transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition-delay: 0s;
+      }
+      .header .burger-container #burger .bar.topBar {
+        transform: translateY(0px) rotate(0deg);
+      }
+      .header .burger-container #burger .bar.btmBar {
+        transform: translateY(6px) rotate(0deg);
+      }
+      .header .icon {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: red;
+        font-size: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .header .icon.icon-bag {
+        right: 0;
+        top: 0;
+        left: auto;
+        transform: translateX(0px);
+        transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition-delay: 0.65s;
+      }
+      .header ul.menu {
+        position: relative;
+        display: block;
+        margin-top: 55%;
+        padding: 0px 48px 0;
+        list-style: none;
+      }
+      .header ul.menu li.menu-item {
+        margin-top: 5px;
+        transform: scale(1.15) translateY(-30px);
+        opacity: 0;
+        transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      }
+      .header ul.menu li.menu-item:nth-child(1) {
+        transition-delay: 0.49s;
+      }
+      .header ul.menu li.menu-item:nth-child(2) {
+        transition-delay: 0.42s;
+      }
+      .header ul.menu li.menu-item:nth-child(3) {
+        transition-delay: 0.35s;
+      }
+      .header ul.menu li.menu-item:nth-child(4) {
+        transition-delay: 0.28s;
+      }
+      .header ul.menu li.menu-item:nth-child(5) {
+        transition-delay: 0.21s;
+      }
+      .header ul.menu li.menu-item:nth-child(6) {
+        transition-delay: 0.14s;
+      }
+      .header ul.menu li.menu-item:nth-child(7) {
+        transition-delay: 0.07s;
+      }
+      .header ul.menu li.menu-item a {
+        display: block;
+        position: relative;
+        color: red;
+        font-family: "MomcakeBold";
+        font-weight: 100;
+        font-size: 1.7em;
+        line-height: 2.35;
+        width: 100%;
+        border: 2px solid red;
+        transition: all 0.2s ease-in-out;
+        padding: 0.02em 1em;
+        margin: 0.8em 0;
+        border-radius: 50px;
+      }
+
+      .header ul.menu li.menu-item a:hover {
+        background-color: red;
+        text-shadow: none;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 0px;
+      }
+      .active{
+        background-color: red;
+        text-shadow: none;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 0px;
+      }
+      .header.menu-opened {
+        height: 100%;
+        background-color: white;
+        transition: all 0.3s ease-in, background 0.5s ease-in;
+        transition-delay: 0.25s;
+      }
+      .header.menu-opened .burger-container {
+        transform: rotate(90deg);
+      }
+      .header.menu-opened .burger-container #burger .bar {
+        transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+        transition-delay: 0.2s;
+      }
+      .header.menu-opened .burger-container #burger .bar.topBar {
+        transform: translateY(4px) rotate(45deg);
+      }
+      .header.menu-opened .burger-container #burger .bar.btmBar {
+        transform: translateY(3px) rotate(-45deg);
+      }
+      .header.menu-opened ul.menu li.menu-item {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(1) {
+        transition-delay: 0.27s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(2) {
+        transition-delay: 0.34s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(3) {
+        transition-delay: 0.41s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(4) {
+        transition-delay: 0.48s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(5) {
+        transition-delay: 0.55s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(6) {
+        transition-delay: 0.62s;
+      }
+       .header.menu-opened ul.menu li.menu-item:nth-child(7) {
+        transition-delay: 0.69s;
+      }
+       .header.menu-opened .icon.icon-bag {
+        transform: translateX(75px);
+        transition-delay: 0.3s;
+      }
+
+    .mobileNav{
+      display: block;
+    }
+  }

@@ -793,6 +793,10 @@ iframe {
       text-align: center;
       font-size: 1.3em;
   }
+
+  .card .cardTitle{
+    font-size: 0.8em;
+  }
   
   .wrap{
     width: 100%;

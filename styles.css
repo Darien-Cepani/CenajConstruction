@@ -549,7 +549,7 @@ iframe {
     }
     
     .footer-logo{
-        width: 12em;
+        width: 10em;
     }
     
     .right-footer{
@@ -566,33 +566,6 @@ iframe {
   @media only screen and (max-width: 600px) {
     .desktopNav{
         display: none;
-    }
-
-    .one{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .greeting-div{
-        display: flex;
-        padding-top: 10em;
-        height: fit-content;
-    }
-    
-    .greeting{
-        width: 80%;
-        text-align: center;
-        font-size: 4em;
-        margin-bottom: 0.5em;
-    }
-
-    .motto{
-        width: 60%;
-        text-align: center;
-        font-size: 1.3em;
     }
     
     .header {
@@ -613,7 +586,7 @@ iframe {
 
       .header .logo{
         position: absolute;
-        margin: 1.5em;
+        margin: 1.8em 0em 0em 1em;
       }
 
       .header .burger-container {
@@ -679,6 +652,7 @@ iframe {
         position: relative;
         display: block;
         margin-top: 55%;
+        width: 100%;
         padding: 0px 48px 0;
         list-style: none;
       }
@@ -718,9 +692,8 @@ iframe {
         font-size: 1.7em;
         line-height: 2.35;
         width: 100%;
-        border: 2px solid red;
         transition: all 0.2s ease-in-out;
-        padding: 0.02em 1em;
+        padding: 0em;
         margin: 0.8em 0;
         border-radius: 50px;
       }
@@ -793,4 +766,35 @@ iframe {
     .mobileNav{
       display: block;
     }
+
+    .one{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+  }
+
+  .greeting-div{
+      display: flex;
+      padding-top: 10em;
+      height: fit-content;
+  }
+  
+  .greeting{
+      width: 80%;
+      text-align: center;
+      font-size: 4em;
+      margin-bottom: 0.5em;
+  }
+
+  .motto{
+      width: 60%;
+      text-align: center;
+      font-size: 1.3em;
+  }
+  
+  .wrap{
+    width: 100%;
+  }
   }

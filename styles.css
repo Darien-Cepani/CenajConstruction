@@ -25,7 +25,8 @@ body{
 
 html{
     scroll-behavior: smooth;
-}
+    overflow-x: hidden;
+  }
 
 #myVideo {
     position: fixed;
@@ -267,6 +268,45 @@ nav{
 .card:hover .cardIcon{
     filter: invert(95%) sepia(0%) saturate(18%) hue-rotate(312deg) brightness(104%) contrast(104%);
 }
+
+.swiperSection{
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(80px);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow-x: none;
+}
+
+.swiper-slide {
+  border-radius: 18px;
+        height: fit-content;
+}
+
+.swiper-button-prev{
+  opacity: 0.3;
+  font-weight: bold;
+  margin: 0 0em;
+  fill: white;
+}
+
+.swiper-button-next{
+  opacity: 0.3;
+  font-weight: bold;
+  margin: 0 0em;
+  fill: white;
+}
+
+.swiper-button-next:hover{
+  opacity: 1;
+}
+.swiper-button-next:hover{
+  opacity: 1;
+}
+
 
 .three{
     font-size: 2em;

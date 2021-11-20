@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0fc50f67b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -158,6 +159,50 @@
             </div>
         </section>
 
+        <section class="swiperSection">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6417.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6420.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6421.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6422.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6449.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6450.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6451.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6457.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6491.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6516.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6517.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6524.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6527.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6529.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6684.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6687.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6890.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6891.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6976.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_6984.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_7005.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_7006.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_7007.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/works/IMG_7009.jpg"/></div>
+                ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+
         <section class="three" id="about">
             <div class="wrap">
                 <h1>About Us:</h1>
@@ -202,6 +247,7 @@
         </section>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
         toTop = document.getElementById("toTop");
         // When the user scrolls down 20px from the top of the document, show the button
@@ -217,6 +263,39 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            keyboard: {
+                enabled: true,
+            },
+            slidesPerView: 3,
+            grabCursor: true,
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     dynamicBullets: true,
+            // },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
     </script>
 
 </body>

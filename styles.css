@@ -205,10 +205,11 @@ nav{
     background-color: rgba(255,255,255,1);
     position: relative;
     align-items: center;
+    height: fit-content;
 }
 
 .two h1 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.2em;
 }
 
 .two p{
@@ -232,7 +233,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: top;
-    padding: 0.8em 0;
+    padding: 10% 0;
 }
 
 .card:hover{
@@ -269,6 +270,55 @@ nav{
     filter: invert(95%) sepia(0%) saturate(18%) hue-rotate(312deg) brightness(104%) contrast(104%);
 }
 
+.couponsSection{
+  position: relative;
+  align-items: center;
+  height: fit-content;
+}
+
+.coupons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 90%;
+  margin-top: 3em;
+}
+
+.coupon {
+  width: 90%;
+  text-align: center;
+  transition: 250ms all ease-in-out;
+}
+
+.couponIcon {
+  width: 100%;
+  transition: 250ms all ease-in-out;
+}
+
+#serviceDescription{
+  padding: 2em 0 ;
+  height: fit-content;
+}
+
+.serviceList{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 1em;
+  width: 80%;
+  margin: 0 auto;
+}
+.serviceList li{
+  padding: 0.5em 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.serviceList li:last-child{
+  padding: 0.5em 0;
+  border: none;
+}
+
 .swiperSection{
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(80px) brightness(0.5);
@@ -277,6 +327,7 @@ nav{
     position: relative;
     align-items: center;
     height: fit-content;
+    padding: 1.5em 0;
 }
 
 .swiperSection h1{
@@ -292,14 +343,9 @@ nav{
 .swiper-slide img {
   border-radius: 18px;
   height: fit-content;
-  width: 530px !important;
+  width: 500px !important;
 }
 
-@media only screen and (max-width: 1604px) {
-  .swiper-slide img {
-    width: 500px !important;
-  }
-}
 @media only screen and (max-width: 1510px) {
   .swiper-slide img {
     width: 480px !important;
@@ -313,6 +359,30 @@ nav{
 @media only screen and (max-width: 1360px) {
   .swiper-slide img {
     width: 420px !important;
+  }
+
+  #serviceDescription{
+    height: fit-content;
+  }
+
+  .serviceList{
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .serviceList li{
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .group1 li:last-child{
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  .group2 li:last-child{
+    padding: 0.5em 0;
+    border: none;
   }
 }
 @media only screen and (max-width: 1274px) {
@@ -329,6 +399,30 @@ nav{
   .swiper-slide img {
     width: 330px !important;
   }
+
+  .serviceList{
+    flex-direction: column;
+    width: 60%;
+    font-size: 0.9em;
+  }
+  
+  .coupons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+  }
+  
+  .coupon {
+    width: 85%;
+    text-align: center;
+    transition: 250ms all ease-in-out;
+    margin: 1em 0em;
+  }
+  
+  .couponIcon {
+    width: 100%;
+    transition: 250ms all ease-in-out;
+  }
 }
 @media only screen and (max-width: 992px) {
   .swiper-slide img {
@@ -344,10 +438,22 @@ nav{
   .swiper-slide img {
     width: 250px !important;
   }
+
+  .serviceList{
+    flex-direction: column;
+    width: 65%;
+    font-size: 0.9em;
+  }
 }
 @media only screen and (max-width: 768px) {
   .swiper-slide img {
     width: 350px !important;
+  }
+
+  .serviceList{
+    flex-direction: column;
+    width: 90%;
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 698px) {
@@ -363,6 +469,12 @@ nav{
 @media only screen and (max-width: 634px) {
   .swiper-slide img {
     width: 200 !important;
+  }
+
+  .serviceList{
+    flex-direction: column;
+    width: 90%;
+    font-size: 1em;
   }
 }
 @media only screen and (max-width: 620px) {
@@ -640,7 +752,6 @@ iframe {
     .cardIcon {
         width: 2em;
         align-self: center;
-        
     }
 
     .three{
@@ -951,4 +1062,24 @@ iframe {
   .wrap{
     width: 100%;
   }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .coupons {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin-top: 3em;
+    }
+    
+    .coupon {
+      width: 90%;
+      text-align: center;
+      transition: 250ms all ease-in-out;
+    }
+    
+    .couponIcon {
+      width: 100%;
+      transition: 250ms all ease-in-out;
+    }
   }

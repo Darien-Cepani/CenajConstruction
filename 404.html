@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0fc50f67b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
         <div class="desktopNav">
             <nav class="navBar">
-                <img src="assets/img/logo-blackText.svg" alt="" class="logo">
+                <a href="index.html"><img src="assets/img/logo-blackText.svg" alt="" class="logo"></a>
                 <ul class="navLinks">
-                    <li><a href="#work" >Work</a></li>
+                    <li><a href="#services" >Services</a></li>
                     <li><a href="#about" >About</a></li>
                     <li><a href="#contact" >Contact</a></li>
                 </ul>
@@ -27,7 +27,7 @@
 
         <div class="mobileNav">
             <div class="header">
-                <img src="assets/img/logo-blackText.svg" alt="" class="logo">
+                <a href="index.html"><img src="assets/img/logo-blackText.svg" alt="" class="logo"></a>
                 <div class="burger-container">
                   <div id="burger">
                     <div class="bar topBar"></div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="icon icon-apple"></div>
                 <ul class="menu">
-                  <li class="menu-item"><a href="#work">Work</a></li>
+                  <li class="menu-item"><a href="#work">Services</a></li>
                   <li class="menu-item"><a href="#about">About</a></li>
                   <li class="menu-item"><a href="#contact">Contact</a></li>
                 </ul>
@@ -56,7 +56,7 @@
                 <p class="motto">Complete Home Repair Services in <a href="https://goo.gl/maps/kBh9xF8ZdUpqXyMn6" class="location">Boston, MA.</a></p>
             </div>
             <div class="more">
-                <a href="#work" class="scroll" onmouseover="lower()" onmouseout="reset()">Find out more</a>
+                <a href="#services" class="scroll" onmouseover="lower()" onmouseout="reset()">Find out more</a>
                 <i class="fas fa-chevron-down" id="down"></i>
             </div>
             <!-- <img src="assets/img/background3.png" alt="" class="backgroundImg inverted" data-aos="fade-down"> -->
@@ -67,91 +67,66 @@
             </div>
         </section>
 
-        <section class="two" id="work">
+        <section class="two" id="services">
             <h1>What we offer:</h1>
-            <p>(Tap to inquire)</p>
+            <!-- <p>(Tap to inquire)</p> -->
             <div class="cards">
                 <div class="card">
                     <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Appliance%20Installation%20*from%20your%20Website*">
+                        <a href="pages/roofing.html">
                             <div class="icon">
                                 <img class="cardIcon" src="assets/img/tools.png"/>
                             </div>
-                            <h1 class="cardTitle">Appliance Installation</h1>
+                            <h1 class="cardTitle">Roofing</h1>
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Bathroom%20Remodeling%20*from%20your%20Website*">
+                        <a href="pages/gutters.html">
                             <div class="icon"><img class="cardIcon" src="assets/img/remodel.png"/></div>
-                            <h1 class="cardTitle">Bathroom Remodeling</h1>
+                            <h1 class="cardTitle">Gutters</h1>
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Complete%20Interior%20Painting%20*from%20your%20Website*">
+                        <a href="pages/siding.html">
                             <div class="icon"><img class="cardIcon" src="assets/img/paint.png"/></div>
-                            <h1 class="cardTitle">Complete Interior Painting</h1>
+                            <h1 class="cardTitle">Siding</h1>
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Deck%20Repair%20and%20Restoration%20*from%20your%20Website*">
+                        <a href="pages/masonry.html">
                             <div class="icon"><img class="cardIcon" src="assets/img/deck.png"/></div>
-                            <h1 class="cardTitle">Deck Repair and Restoration</h1>
+                            <h1 class="cardTitle">Masonry</h1>
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Door%20Installation%20and%20Repair%20*from%20your%20Website*">
+                        <a href="pages/chimney.html">
                             <div class="icon"><img class="cardIcon" src="assets/img/door.png"/></div>
-                            <h1 class="cardTitle">Door Installation and Repair</h1>
+                            <h1 class="cardTitle">Chimney</h1>
                         </a>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Electrical%20Fixture%20Repair%20*from%20your%20Website*">
-                            <div class="icon"><img class="cardIcon" src="assets/img/outlet.png"/></div>
-                            <h1 class="cardTitle">Electrical Fixture Repair</h1>
-                        </a>
-                    </div>
+            </div>
+
+            <div class="coupons">
+                <div class="coupon">
+                    <div class="couponIconDiv"><img class="couponIcon" src="assets/img/coupons/coupon1.png"/></div>
                 </div>
-                <div class="card">
-                    <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Hardwood%20Flooring%20Installation%20*from%20your%20Website*">
-                            <div class="icon"><img class="cardIcon" src="assets/img/parquet.png"/></div>
-                            <h1 class="cardTitle">Hardwood Flooring Installation</h1>
-                        </a>
-                    </div>
+                <div class="coupon">
+                    <div class="couponIconDiv"><img class="couponIcon" src="assets/img/coupons/coupon2.png"/></div>
                 </div>
-                <div class="card">
-                    <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Handyman%20Services%20*from%20your%20Website*">
-                            <div class="icon"><img class="cardIcon" src="assets/img/handyman.png"/></div>
-                            <h1 class="cardTitle">Handyman Services</h1>
-                        </a>
-                    </div>
+                <div class="coupon">
+                    <div class="couponIconDiv"><img class="couponIcon" src="assets/img/coupons/coupon3.png"/></div>
                 </div>
-                <div class="card">
-                    <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Tile%20Flooring%20Installation%20*from%20your%20Website*">
-                            <div class="icon"><img class="cardIcon" src="assets/img/tiles.png"/></div>
-                            <h1 class="cardTitle">Tile Flooring Installation</h1>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <a href="https://wa.me/18573124573/?text=Hello!%20I%20am%20interested%20in%20Kitchen%20Cabinet%20Remodeling%20&%20Installation%20*from%20your%20Website*">
-                            <div class="icon"><img class="cardIcon" src="assets/img/kitchen.png"/></div>
-                            <h1 class="cardTitle">Kitchen Cabinet Remodeling And Installation</h1>
-                        </a>
-                    </div>
+                <div class="coupon">
+                    <div class="couponIconDiv"><img class="couponIcon" src="assets/img/coupons/coupon4.png"/></div>
                 </div>
             </div>
         </section>
@@ -159,48 +134,46 @@
         <section class="three" id="about">
             <div class="wrap">
                 <h1>About Us:</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
-                    pariatur adipisci minus illum atque mollitia vitae minima 
-                    perferendis expedita repellendus earum ipsum non.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
-                    pariatur adipisci minus illum atque mollitia vitae minima 
-                    perferendis expedita repellendus earum ipsum non.</p>
-                    <br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Quia, accusantium nisi. Eum cum, eaque aperiam hic, 
-                    pariatur adipisci minus illum atque mollitia vitae minima 
-                    perferendis expedita repellendus earum ipsum non.</p>
-                    <br>
-                <p><b>Qualityis what we areproud of.</b></p>
+                <p>
+                    &emsp;We are a Family Owned Company based in New Jersey with <span style="color: red;">more than 15 years of experience</span> working with roofing, chimneys, and masonry.
+                </p>
+                <br>
+                <p>
+                    &emsp;Over the years, the company has undertaken many <span style="color: red;">challenging projects</span> and accumulated skills, know-how and experiences in repair, 
+                    replacement, design and build solutions, project management services, and related construction works.
+                </p>
+                <br>
+                <p style="text-align: center;">
+                    We are a fully <span style="color: red;">insured and licensed</span> Construction Company<br>
+                    <span style="font-size: 1.5em; color: rgba(255,255,255,0.3)">LIC#: 13VH10952600</span>
+                </p>
             </div>
         </section>
 
         <section class="four">
             <div id="contact">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d94373.6999350821!2d-71.0940313!3d42.3387256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a0de7e77a4b%3A0x2f033fd6c495d564!2sMuseum%20of%20Fine%20Arts%2C%20Boston!5e0!3m2!1sen!2s!4v1627412578787!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24133.886874170283!2d-74.12855952701393!3d40.87767057497139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f944ef152515%3A0xebf8b6fded5df529!2sGarfield%2C%20NJ%2007026%2C%20USA!5e0!3m2!1sen!2sgr!4v1637454505478!5m2!1sen!2sgr"
                 allowfullscreen="1" 
                 loading="lazy"
                 class="map">
             </iframe>
             <div class="custom">
                 <h1>Need custom work done?</h1>
-                <a href="https://wa.me/18573124573/?text=Hello!%20*I%20am%20coming%20from%20the%20website*%20and%20I%20have%20a%20special%20request" class="button inverted">Contact Us!</a>
+                <a href="tel:857-312-4573" class="button inverted">Let's Talk!</a>
             </div>
         </div>
         </section>
 
         <section  class="footer">
             <div class="left-footer">
-                <p><b style="color: red; font-weight: bold;">Phone:</b> 857-312-4573  <span style="color: red; font-weight: bold">|</span>  857-237-5932</p>
+                <p><b style="color: red; font-weight: bold;">Phone:</b> <a href="tel:857-312-4573" style="color: black;">857-312-4573</a> <span style="color: red; font-weight: bold">|</span> <a href="tel:857-237-5932" style="color: black;">857-237-5932</a></p>
             </div>
             <div class="center-footer">
-                <img class="footer-logo" src="assets/img/logo-blackText.svg"/>
+                <a href="index.html"><img class="footer-logo" src="assets/img/logo-blackText.svg"/></a>
             </div>
             <div class="right-footer" style="display: flex; vertical-align: baseline;">
-                <p><b style="color: red; font-weight: bold;">Email:</b> albansmaka@outlook.com</p>
+                <p><b style="color: red; font-weight: bold;">Email:</b> <a href="mailto:albansmaka@outlook.com" style="color: black;">albansmaka@outlook.com</a></p>
                 <!-- <p>Powered by</p>
                 <a href="https://pike.al"><img class="logo-pikeal grow" src="assets/img/logo.png"></a> -->
             </div>

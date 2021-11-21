@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cenaj Construction</title>
+    <link rel="icon" href="../assets/img/logo.svg">
+    <meta name="author" content="pike.al">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fc50f67b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body>
+        <div class="desktopNav">
+            <nav class="navBar">
+                <a href="../index.html"><img src="../assets/img/logo-blackText.svg" alt="" class="logo"></a>
+                <ul class="navLinks">
+                    <li><a href="../index.html" >
+                            <div style="display: inline-block;"><i class="fas fa-chevron-left" style="font-size: 0.8em;"></i></div>
+                            <div style="display: inline-block;">Home</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mobileNav">
+            <div class="header">
+                <a href="../index.html"><img src="../assets/img/logo-blackText.svg" alt="" class="logo"></a>
+                <div class="burger-container">
+                  <div id="burger">
+                    <div class="bar topBar"></div>
+                    <div class="bar btmBar"></div>
+                  </div>
+                </div>
+                <div class="icon icon-apple"></div>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="../index.html" >
+                            <div style="display: inline-block;"><i class="fas fa-chevron-left" style="font-size: 0.8em;"></i></div>
+                            <div style="display: inline-block;">Home</div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="shop icon icon-bag"></div>
+              </div>
+        </div>
+
+        <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+        
+            <div class="video-container">
+                <video autoplay loop muted id="myVideo">
+                    <source src="../assets/video/background-vid.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        <section class="swiperSection">
+            <h1 style="font-size: 2.5em; margin-bottom: 0.5em;">Previous <span style="color: red;">Masonry</span> Jobs</h1>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="../assets/img/works//masonry/IMG_6449.jpg"/></div>
+                <div class="swiper-slide"><img src="../assets/img/works//masonry/IMG_6450.jpg"/></div>
+                <div class="swiper-slide"><img src="../assets/img/works//masonry/IMG_6451.jpg"/></div>
+                <div class="swiper-slide"><img src="../assets/img/works//masonry/IMG_6684.jpg"/></div>
+                <div class="swiper-slide"><img src="../assets/img/works//masonry/IMG_6687.jpg"/></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+
+        <section class="three" id="serviceDescription">
+            <div class="wrap">
+                <h1>Our <span style="color: red;">Masonry</span> Services:</h1>
+                <ul class="serviceList">
+                    <div class="group1">
+                        <li>Masonry Repair</li>
+                        <li>Masonry Construction</li>
+                        <li>Brick Repair</li>
+                        <li>Sidewalk Repair</li>
+                        <li>Block Wall Repair</li>
+                        <li>Steps and Stoop Repair</li>
+                    </div>
+                    <div class="group2">
+                        <li>Brick Step Repair</li>
+                        <li>Stone Step Repair</li>
+                        <li>Concrete Step Repair</li>
+                        <li>Foundation Repair</li>
+                        <li>Foundation Crack Repair</li>
+                        <li>Retaining Wall Repair</li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+        <section class="four">
+            <div id="contact">
+                <div class="custom">
+                    <h1>Need custom work done?</h1>
+                    <a href="tel:857-312-4573" class="button inverted">Let's Talk!</a>
+                </div>
+        </div>
+        </section>
+
+        <section  class="footer">
+            <div class="left-footer">
+                <p><b style="color: red; font-weight: bold;">Phone:</b> <a href="tel:857-312-4573" style="color: black;">857-312-4573</a> <span style="color: red; font-weight: bold">|</span> <a href="tel:857-237-5932" style="color: black;">857-237-5932</a></p>
+            </div>
+            <div class="center-footer">
+                <a href="../index.html"><img class="footer-logo" src="../assets/img/logo-blackText.svg"/></a>
+            </div>
+            <div class="right-footer" style="display: flex; vertical-align: baseline;">
+                <p><b style="color: red; font-weight: bold;">Email:</b> <a href="mailto:albansmaka@outlook.com" style="color: black;">albansmaka@outlook.com</a></p>
+                <!-- <p>Powered by</p>
+                <a href="https://pike.al"><img class="logo-pikeal grow" src="assets/img/logo.png"></a> -->
+            </div>
+        </section>
+
+    <script src="../index.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        toTop = document.getElementById("toTop");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTop.style.opacity = "1.0";
+            } else {
+                toTop.style.opacity = "0.0";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            keyboard: {
+                enabled: true,
+            },
+            grabCursor: true,
+            direction: 'horizontal',
+            loop: true,
+
+            slidesPerView: 3,
+            spaceBetween: 10,
+            // init: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            breakpoints:{
+                992: {
+                    slidesPerView: 3,
+                },
+                769: {
+                    slidesPerView: 3,
+                },
+                620: {
+                    slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+    </script>
+
+</body>
+</html>

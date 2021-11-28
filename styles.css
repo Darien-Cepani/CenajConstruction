@@ -46,6 +46,40 @@ section{
     scroll-margin-top: 2em;
 }
 
+.topLine{
+  height: fit-content;
+  width: 100%;
+  background: black;
+  margin: 0;
+  padding: 1em 0em;
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+.track{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
+  color: white;
+}
+
+.track div{
+  font-size: 1.2em;
+  display: flex; 
+  align-items: center;
+}
+
+.track a{
+  color: white;
+}
+
+.track div i{
+  color: red;
+  padding: 0em 0.5em;
+  font-size: 1em;
+}
+
 .mobileNav{
     display: none;
 }
@@ -222,6 +256,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 95%;
+    justify-content: center;
 }
 
 .card {
@@ -330,8 +365,9 @@ nav{
     padding: 1.5em 0;
 }
 
-.swiperSection h1{
-  margin-bottom: 1em;
+.swiperTitle{
+  font-size: 2em; 
+  margin-bottom: 0.5em;
 }
 
 .swiper {
@@ -433,6 +469,16 @@ nav{
   .swiper-slide img {
     width: 280px !important;
   }
+
+  .track div{
+    font-size: 1em;
+    display: flex; 
+    align-items: center;
+  }
+
+  .track i {
+    font-size: 0.8;
+  }
 }
 @media only screen and (max-width: 854px) {
   .swiper-slide img {
@@ -455,10 +501,45 @@ nav{
     width: 90%;
     font-size: 1em;
   }
+
+  .swiperSection .swiperTitle{
+    font-size: 10vw; 
+    margin: 2em 0;
+  }
+  
 }
 @media only screen and (max-width: 698px) {
   .swiper-slide img {
     width: 320px !important;
+  }
+
+  .topLine{
+    position: sticky;
+    top: 0;
+    background: black;
+    white-space: nowrap;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(90%); }
+    35% { transform: translateX(10%); }
+    65% { transform: translateX(-10%); }
+    100% { transform: translateX(-90%); }
+  }
+
+  .track{
+  animation: marquee 15s ease-in-out infinite;
+  }
+
+  .track div{
+    font-size: 1em;
+    display: flex; 
+    align-items: center;
+    margin: 0em 1em;
+  }
+
+  .track i {
+    font-size: 0.6em;
   }
 }
 @media only screen and (max-width: 641px) {
@@ -736,9 +817,9 @@ iframe {
     }
 
     .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         text-decoration: none;
     }
 
@@ -746,6 +827,7 @@ iframe {
         margin: 0.5em 0.5em;
         border: 1px solid rgba(0,0,0,0.1);
         height: 220px;
+        width: 40%;
         align-items: center;
     }
     
@@ -830,12 +912,10 @@ iframe {
     }
     
     .header {
-        position: fixed;
         display: flex;
         justify-content: space-between;
         padding: 0 1em;
-        top: 0;
-        left: 0;
+        top: 3em;
         height: 5em;
         width: 100%;
         overflow: hidden;
@@ -1025,7 +1105,10 @@ iframe {
       }
 
     .mobileNav{
-      display: block;
+      display: flex;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
     }
 
     .one{
@@ -1068,7 +1151,7 @@ iframe {
     .coupons {
       display: grid;
       grid-template-columns: 1fr;
-      width: 90%;
+      width: 55%;
       margin-top: 3em;
     }
     

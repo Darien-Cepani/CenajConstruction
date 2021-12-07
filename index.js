@@ -71,3 +71,8 @@ function lower() {
 function reset() {
     document.getElementById("down").style.marginTop = "0em";
 }
+
+function closeHeader() {
+    document.querySelector(".header").classList.toggle("menu-opened");
+    console.log("Closed Header");
+}

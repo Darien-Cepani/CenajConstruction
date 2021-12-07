@@ -504,7 +504,7 @@ nav{
 
   .swiperSection .swiperTitle{
     font-size: 10vw; 
-    margin: 2em 0;
+    margin: 1.5em 0 0.5em 0;
   }
   
 }
@@ -544,13 +544,10 @@ nav{
 }
 @media only screen and (max-width: 641px) {
   .swiper-slide img {
-    width: 260 !important;
+    width: 300px !important;
   }
 }
 @media only screen and (max-width: 634px) {
-  .swiper-slide img {
-    width: 200 !important;
-  }
 
   .serviceList{
     flex-direction: column;

@@ -373,6 +373,7 @@ nav{
 
 .swiper {
   width: 100%;
+  height: fit-content;
   color: white;
   overflow-x: none;
 }
@@ -582,6 +583,7 @@ nav{
 
 .swiper-wrapper{
   align-items: center;
+  height: fit-content;
 }
 
 .swiper-button-prev{

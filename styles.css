@@ -47,10 +47,12 @@ section{
 }
 
 .topLine{
+  position: sticky;
   height: fit-content;
   width: 100%;
   background: black;
   margin: 0;
+  top: 0;
   padding: 1em 0em;
   z-index: 1000;
   overflow-x: hidden;
@@ -85,9 +87,8 @@ section{
 }
 
 .desktopNav{
-    display: relative;
     position: sticky;
-    top: 0;
+    top: 3.3em;
     z-index: 10;
 }
 
@@ -430,6 +431,19 @@ nav{
   .swiper-slide img {
     width: 360px !important;
   }
+
+  nav{
+    z-index: 10;
+    top: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+}
+
 }
 @media only screen and (max-width: 1088px) {
   .swiper-slide img {
@@ -468,6 +482,10 @@ nav{
 @media only screen and (max-width: 908px) {
   .swiper-slide img {
     width: 280px !important;
+  }
+
+  .desktopNav{
+    top: 3.1em;
   }
 
   .track div{
@@ -778,10 +796,6 @@ iframe {
         background-color: red; /* Set a background color */
         border-radius: 0;
       }
-
-      .navLinks li {
-        padding: 0;
-    }
 
     .one{
         display: flex;
